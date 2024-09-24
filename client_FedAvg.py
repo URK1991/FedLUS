@@ -14,7 +14,7 @@ from flwr.common.logger import log
 import torchvision.transforms as transforms
 from torch.utils.data import Dataset, DataLoader
 from torchvision import datasets
-
+import models
 import flwr as fl
 
 
@@ -58,7 +58,7 @@ class FL_LUS_Dataset(Dataset):
 
 
 #Define the model as it was defined on the server side
-net = get
+model = get_model_R18_SA(num_classes=4).to(device)
 def load_data(train_dir, center_name):
     class_weights = []
     for i in range(4): #4 due to 4 scores
