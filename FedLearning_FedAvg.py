@@ -6,7 +6,7 @@ from typing import Callable, Dict, List, Optional, Tuple, Union
 from collections import OrderedDict
 import numpy as np
 import torch.nn as nn
-import math
+from models import get_model
 from functools import reduce
 
 
@@ -28,7 +28,6 @@ from flwr.server.strategy.aggregate import aggregate
 from logging import WARNING
 
 #Selecting the Model Architecture
-
 
 model = get_model_R18_SA(num_classes=4).to(device)
     
