@@ -1,5 +1,5 @@
 import flwr as fl
-from Client_FedAvg import LUSClient
+from client_FedAvg import LUSClient
 from flwr.server.strategy import FedAvg
 import torch
 from typing import Callable, Dict, List, Optional, Tuple, Union
